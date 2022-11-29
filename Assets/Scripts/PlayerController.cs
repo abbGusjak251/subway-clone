@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     private float jumpForce = 5f;
     private Transform transformOrigin;
+    public enum Powerups {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
