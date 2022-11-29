@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         Running,
         Dead
     };
-    public State state = State.Idle;
+    public State state = State.Running;
     // Start is called before the first frame update
     void Start()
     {

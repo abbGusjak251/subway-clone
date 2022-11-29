@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4440221, g: 0.49316514, b: 0.5722316, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 742613123}
+  state: 0
 --- !u!54 &742613123
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -441,6 +442,7 @@ GameObject:
   - component: {fileID: 1967198146}
   - component: {fileID: 1967198145}
   - component: {fileID: 1967198144}
+  - component: {fileID: 1967198148}
   - component: {fileID: 1967198143}
   m_Layer: 0
   m_Name: Plane
@@ -544,3 +546,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967198148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967198142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd88d7ea0e1ca746894655d2742a774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
