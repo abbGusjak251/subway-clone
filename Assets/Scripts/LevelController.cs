@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    private Transform m_transform;
-    private float speed = -0.05f;
+    private Vector3 startPos;
+    private float speed = -0.0025f;
     // Start is called before the first frame update
     void Start()
     {
-        m_transform = gameObject.transform;
+        startPos = transform.position;
+        InvokeRepeating("ResetPosition", 0f, 8f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = m_transform.position + Vector3.forward * speed;
+        transform.position += Vector3.forward * speed;
+    }
+
+    void ResetPosition() {
+        transform.position = startPos;
     }
 }
