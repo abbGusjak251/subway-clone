@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
     private float jumpForce = 5f;
     private Vector3 positionOrigin;
     private Vector3[] positions = new Vector3[3];
@@ -16,10 +16,11 @@ public class PlayerController : MonoBehaviour
         Running,
         Dead
     };
-    public State state = State.Idle;
+    public State state = State.Running;
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         positionOrigin = transform.position;
         // Add possible horizontal positions
         positions[0] = positionOrigin - Vector3.left*railDistance;
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
             Vector3 toPos = new Vector3(positions[positionIndex].x, transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, toPos, .2f);
+            transform.position = Vector3.Lerp(transform.position, toPos, .5f);
         }
     }
 
