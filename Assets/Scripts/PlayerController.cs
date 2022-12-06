@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-<<<<<<< HEAD
     public Rigidbody rb;
     private float jumpForce = 5f;
     private Transform transformOrigin;
@@ -12,7 +11,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         transformOrigin = gameObject.transform;
-=======
     private Rigidbody rb;
     private float jumpForce = 5f;
     private Vector3 positionOrigin;
@@ -35,13 +33,11 @@ public class PlayerController : MonoBehaviour
         positions[0] = positionOrigin - Vector3.left*railDistance;
         positions[1] = positionOrigin;
         positions[2] = positionOrigin + Vector3.left*railDistance;
->>>>>>> 0445e333b53d76b9ded26e2ffe266bd605747c9b
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         if(Input.GetKeyDown("space")) {
             Jump();
         }
@@ -52,7 +48,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown("right")) {
             transform.position = transformOrigin.position - Vector3.left*2f;
             Debug.Log(transformOrigin.position);
-=======
         // Toggle states (Debug)
         if(Input.GetKeyDown(KeyCode.T)) {
             if(state == State.Running) {
@@ -80,15 +75,12 @@ public class PlayerController : MonoBehaviour
             }
             Vector3 toPos = new Vector3(positions[positionIndex].x, transform.position.y, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, toPos, .5f);
->>>>>>> 0445e333b53d76b9ded26e2ffe266bd605747c9b
         }
     }
 
     void Jump() {
-<<<<<<< HEAD
         rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
     }
-=======
         Debug.Log(grounded);
         rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
     }
@@ -104,5 +96,4 @@ public class PlayerController : MonoBehaviour
             grounded = false;
         }
     }
->>>>>>> 0445e333b53d76b9ded26e2ffe266bd605747c9b
 }
