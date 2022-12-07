@@ -8,11 +8,8 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 5f;
     private Transform transformOrigin;
     // Start is called before the first frame update
-    void Start()
-    {
-        transformOrigin = gameObject.transform;
-    private Rigidbody rb;
-    private float jumpForce = 5f;
+   // void Start()
+    //{
     private Vector3 positionOrigin;
     private Vector3[] positions = new Vector3[3];
     private int positionIndex = 0;
@@ -30,6 +27,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         positionOrigin = transform.position;
         // Add possible horizontal positions
+
+        transformOrigin = gameObject.transform;
         positions[0] = positionOrigin - Vector3.left*railDistance;
         positions[1] = positionOrigin;
         positions[2] = positionOrigin + Vector3.left*railDistance;

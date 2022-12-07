@@ -1,6 +1,7 @@
 
 using UnityEngine;
 
+
 public enum PieceType
 {
     none=-1,
@@ -10,9 +11,10 @@ public enum PieceType
     slide=3,
 
 }
+
 public class Piece : MonoBehaviour
 {
-  public PieceType type;
-  public int visualIndex;
+    public PieceType type;
+    public int visualIndex;
 
 }
