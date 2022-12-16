@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         positionOrigin = transform.position;
 
         // Add possible horizontal positions
+
         positions[0] = positionOrigin - Vector3.left*railDistance;
         positions[1] = positionOrigin;
         positions[2] = positionOrigin + Vector3.left*railDistance;
